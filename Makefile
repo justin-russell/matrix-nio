@@ -11,8 +11,9 @@ typecheck:
 coverage:
 	python3 -m pytest --cov nio --benchmark-disable
 
-isort:
-	isort -p nio
+lint:
+	black nio
+	isort --profile=black nio
 
 clean:
 	-rm -r dist/ __pycache__/
