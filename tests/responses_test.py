@@ -29,6 +29,8 @@ from nio.responses import (
     ProfileGetAvatarResponse,
     ProfileGetDisplayNameResponse,
     ProfileGetResponse,
+    RegisterInteractiveResponse,
+    RegisterResponse,
     RoomContextError,
     RoomContextResponse,
     RoomCreateResponse,
@@ -47,8 +49,6 @@ from nio.responses import (
     ToDeviceResponse,
     UploadResponse,
     _ErrorWithRoomId,
-    RegisterResponse,
-    RegisterInteractiveResponse,
 )
 
 TEST_ROOM_ID = "!test:example.org"
