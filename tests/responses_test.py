@@ -36,6 +36,8 @@ from nio.responses import (
     RoomLeaveResponse,
     RoomMessagesResponse,
     RoomTypingResponse,
+    SpaceGetHierarchyError,
+    SpaceGetHierarchyResponse,
     SyncError,
     SyncResponse,
     ThumbnailError,
@@ -287,3 +289,8 @@ class TestClass:
         )
         response = RegisterInteractiveResponse.from_dict(parsed_dict)
         assert isinstance(response, RegisterInteractiveResponse)
+
+    def test_space_get_hierarchy(self):
+        parsed_dict = TestClass._load_response("tests/data/get_hierarchy_response.json")
+        response = SpaceGetHierarchyResponse.from_dict(parsed_dict)
+        assert isinstance(response, SpaceGetHierarchyResponse)
