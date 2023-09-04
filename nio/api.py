@@ -27,6 +27,7 @@ client like AsyncClient or HttpClient.
 from __future__ import unicode_literals
 
 import json
+import os
 from collections import defaultdict
 from enum import Enum, unique
 from typing import (
