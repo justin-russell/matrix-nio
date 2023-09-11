@@ -358,12 +358,8 @@ class Api:
         content_dict = {
             "username": user,
             "password": password,
+            "auth": auth_dict or {"type": "m.login.dummy"},
         }
-
-        if auth_dict is not None:
-            content_dict["auth"] = auth_dict
-        else:
-            content_dict["auth"] = {"type": "m.login.dummy"}
 
         if device_id:
             content_dict["device_id"] = device_id
